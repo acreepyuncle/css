@@ -1,28 +1,38 @@
 # css
 # 多类名选择器
 - 在style里写的样式，可以在body的div等中调用,且可调用多个，样式类名中间用空格隔开。
-- 例：<div class="pink font20">111</div>
+```
+<body>
+<div class="pink font20">111</div>
+</body>
+```
 - 样式显示效果跟html元素类名先后没有关系，受CSS样式书写上下顺序有关。可以调用多次样式类名
 
 # 类名选择器（class选择器）
+```
 - <div class="nav"> 这个div的名字就是nav,nav就是div  这个div就是nav
+```
 - 我们想要把div找到 div{} .nav{}
 
 # id选择器 好比身份证号，唯一的，只能使用一次
-- 例<div id="last"> #定义 id调用
+```
+ <div id="last"> #定义 id调用
+ ```
 
 # 通配符选择器(开发基本不用）
-- 用*表示所有的意思
-例<style>
+- 用 * 表示所有的意思
+```
+<style>
 *{
 }
 </style>
+```
 
-CSS字体样式属性
-font-size字体字号大小（要带单位） 常用单位px像素 em
-font-family:"字体"  字体可输入英文名称，输入Unicode编码兼容性更好
-font-weight:字体粗细（可以直接输入数字,建议用数字）  bold粗体700   normal 普通400
-font-style: 字体风格 normal italic斜体
+# CSS字体样式属性
+- font-size字体字号大小（要带单位） 常用单位px像素 em
+- font-family:"字体"  字体可输入英文名称，输入Unicode编码兼容性更好
+- font-weight:字体粗细（可以直接输入数字,建议用数字）  bold粗体700   normal 普通400
+- font-style: 字体风格 normal italic斜体
 
 字体连写
 选择器{font: font-style font-size/line-height font-family}
