@@ -1,16 +1,18 @@
 # css
-多类名选择器
-在style里写的样式，可以在body的div等中调用,且可调用多个，样式类名中间用空格隔开。
-例：<div class="pink font20">111</div>
-样式显示效果跟html元素类名先后没有关系，受CSS样式书写上下顺序有关。可以调用多次样式类名 
-类名选择器（class选择器）：<div class="nav"> 这个div的名字就是nav,nav就是div  这个div就是nav
-我们想要把div找到 div{} .nav{}
+# 多类名选择器
+- 在style里写的样式，可以在body的div等中调用,且可调用多个，样式类名中间用空格隔开。
+- 例：<div class="pink font20">111</div>
+- 样式显示效果跟html元素类名先后没有关系，受CSS样式书写上下顺序有关。可以调用多次样式类名
 
-id选择器 好比身份证号，唯一的，只能使用一次
-例<div id="last"> #定义 id调用
+# 类名选择器（class选择器）
+- <div class="nav"> 这个div的名字就是nav,nav就是div  这个div就是nav
+- 我们想要把div找到 div{} .nav{}
 
-通配符选择器(开发基本不用）
-用*表示所有的意思
+# id选择器 好比身份证号，唯一的，只能使用一次
+- 例<div id="last"> #定义 id调用
+
+# 通配符选择器(开发基本不用）
+- 用*表示所有的意思
 例<style>
 *{
 }
