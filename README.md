@@ -34,9 +34,9 @@
 - font-weight:字体粗细（可以直接输入数字,建议用数字）  bold粗体700   normal 普通400
 - font-style: 字体风格 normal italic斜体
 
-字体连写
-选择器{font: font-style font-size/line-height font-family}
-必须保留font-size和font-family属性(否则报错），其余可以省略
+# 字体连写
+- 选择器{font: font-style font-size/line-height font-family}
+- 必须保留font-size和font-family属性(否则报错），其余可以省略
 
 text-indent:段落首行缩进 1em为一个字符 em是字符单位
 text-align:center  文字居中
@@ -45,92 +45,98 @@ none取消装饰 underline下划线
  文本格式化标签样式 em和i 倾斜    strong和b 粗细  u和ins 下划线 s和del 删除线
 
 
-复合选择器
-1后代选择器
+# 复合选择器
+- 后代选择器
 用来选择元素或元素组的后代，写法是把外层标签写在前面，内层标签写在后面，中间用空格隔开。标签有嵌套，内层标签就为外层标签的后代
 例：ul li a {}
-2子代选择器：指的是亲儿子（大于号分割）
+- 子代选择器：指的是亲儿子（大于号分割）
  例 ul li > a {}
-3交集选择器 标签连写 既又的关系  既是div又叫red 使用的较少
+- 交集选择器 标签连写 既又的关系  既是div又叫red 使用的较少
 例:div.red
-4并集选择器：用逗号隔开，逗号代表和的意思，集体声明，适合于相同样式
+- 并集选择器：用逗号隔开，逗号代表和的意思，集体声明，适合于相同样式
 例:div,p,span{}
 
-链接伪类选择器
-:link 链接未访问过的状态
-:visited 链接访问过的状态
-:hover 鼠标经过的状态
-:active 鼠标按下的状态
+# 链接伪类选择器
+- :link 链接未访问过的状态
+- :visited 链接访问过的状态
+- :hover 鼠标经过的状态
+- :active 鼠标按下的状态
 书写顺序不要颠倒
-例:a:link
+```a:link```
 
 ctrl+/快速添加注释
 
-sublime快捷键
+# sublime快捷键
 生成标签，直接输入标签名按tab键即可
-生成多个相同标签加上*个数即可
+生成多个相同标签加上 * 个数即可
 有父子级关系的标签，用> 比如ul>li
 兄弟关系的标签，用+ 比如div+p
 生成带有类名或id名字的,写.demo或#id名按下tab键即可
 
-标签（元素）显示模式（display)
-块级元素block-level
-每个块元素通常占据一整行或多行，可设置高度宽度对齐等属性，常见块元素有<h1>~<6>,p,div ul ol li，div是典型
-块元素特点：宽度默认是页面全部占满，可以容纳内联元素和其他块元素
-行内元素inline-level
+# 标签（元素）显#示模式（display)
+- 块级元素block-level
+每个块元素通常占据一整行或多行，可设置高度宽度对齐等属性，常见块元素有h1~h6,p,div ul ol li，div是典型
+- 块元素特点：宽度默认是页面全部占满，可以容纳内联元素和其他块元素
+- 行内元素inline-level
 典型的行内元素是<span>
-特点：每个行内元素都可以在一行上，高宽无效，水平方向的padding和margin可以设置，垂直方向无效。默认宽度是标签内内容的宽度，行内元素只能容纳文本或其他行内元素（a特殊因为a可以放块级元素)
-行内块元素inline-block
+- 特点：每个行内元素都可以在一行上，高宽无效，水平方向的padding和margin可以设置，垂直方向无效。默认宽度是标签内内容的宽度，行内元素只能容纳文本或其他行内元素（a特殊因为a可以放块级元素)
+- 行内块元素inline-block
 img/ input/  td
 把块级元素转换为行内元素
-例div{
+```
+ div{
 display:inline;
 }
+ ```
 把行内元素转换为块级元素
-例：span{
+```
+ span{
 display:block;
 }
+ ```
 把行内、块元素转换为行内块元素
-例a{
+```
+ a{
 display：inline-block;
 } 
+```
+ 
+# 行高的问题line-height
+- 行高等于height 文字会垂直居中
+- 若行高大于height，文字会向下
 
-行高的问题line-height
-行高等于height 文字会垂直居中
-若行高大于height，文字会向下
-
-三大特性
-层叠性：书写时如果出现冲突，后边的样式覆盖前面的样式。样式不冲突不会层叠（就近原则，长江后浪推前浪）
-继承性：子标签会继承父标签的某些样式如：文本颜色字号（子承父业）
+# 三大特性
+- 层叠性：书写时如果出现冲突，后边的样式覆盖前面的样式。样式不冲突不会层叠（就近原则，长江后浪推前浪）
+- 继承性：子标签会继承父标签的某些样式如：文本颜色字号（子承父业）
 权重（优先级） 低到高
 *{}0000  div{}0001   .class0010  #id0100  写在标签内（行内）1000  !important 无穷大
 权重相同则就近原则，权重可以叠加
 继承的权重为0
 
 背景
-background-color:
-background-image: url()
-background-repeat:repeat 背景平铺
-background-repeat:no-repeat
-background-repeat:repeat-x x轴向平铺 
-background-repeat:repeat-y y轴向平铺
-background-position:水平方向 垂直方向 两个参数 top left  bottom下 right右
+- background-color:
+- background-image: url()
+- background-repeat:repeat 背景平铺
+- background-repeat:no-repeat
+- background-repeat:repeat-x x轴向平铺 
+- background-repeat:repeat-y y轴向平铺
+- background-position:水平方向 垂直方向 两个参数 top left  bottom下 right右
 1.position后面可以跟方位名词，之间没有上下顺序。
 2.position后面如果只写一个方位名词，另一个默认是居中
 3.positon后面也可以跟值px,x轴值在前，y轴值在后 (left和top)
-background-attachment: fixed（背景固定）
-background-attachment: scroll（背景滚动)
-背景连写 background:背景颜色 背静图片地址 背景平铺 背景滚动 背景位置  
+- background-attachment: fixed（背景固定）
+- background-attachment: scroll（背景滚动)
+- 背景连写 background:背景颜色 背静图片地址 背景平铺 背景滚动 背景位置  
 
-背景透明（CSS3）
-background: rgba( , , , )red green blue alpha(透明度）0~1
+# 背景透明（CSS3）
+- background: rgba( , , , )red green blue alpha(透明度）0~1
 
-盒子模型（重点）
-盒子边框（border)
+# 盒子模型（重点）
+- 盒子边框（border)
 border-width:
 border-style: none（没有边框） solid（实线边框）dashed（虚线）dotted（点线）
 border-color:
-边框连写
+- 边框连写
 border: 四边宽度 四边样式 四边颜色;
 例border: 1px solid red;
 
