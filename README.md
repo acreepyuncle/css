@@ -140,64 +140,67 @@ border-color:
 border: 四边宽度 四边样式 四边颜色;
 例border: 1px solid red;
 
-边框拆开
+# 边框拆开
 border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid red; border-right: 1px solid red;
 
-表格细线边框
-border-collapse: collapse(合并相邻表格，让线变细）
+# 表格细线边框
+- border-collapse: collapse(合并相邻表格，让线变细）
 
-内边距(padding)
-padding: 10px; (上下左右10像素的
-padding-left
-padding-right
-padding-top
-padding-bottom
+# 内边距(padding)
+- padding: 10px; (上下左右10像素的
+- padding-left
+- padding-right
+- padding-top
+- padding-bottom
 
 内边距问题
-padding: 10px 20px;(上下10，左右20)
-padding: 10px 20px 30px;(上10，左右20 下30)
-padding: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
+- padding: 10px 20px;(上下10，左右20)
+- padding: 10px 20px 30px;(上10，左右20 下30)
+- padding: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
 
 外边距(margin)
-margin: 10px 20px;(上下10，左右20)
-margin: 10px 20px 30px;(上10，左右20 下30)
-margin: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
+- margin: 10px 20px;(上下10，左右20)
+- margin: 10px 20px 30px;(上10，左右20 下30)
+- margin: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
 
 盒子水平居中
-margin: 0 auto;(上下是0，左右是自动，水平居中对齐）
-margin-left:auto; margin-right:auto (自动充满）
+- margin: 0 auto;(上下是0，左右是自动，水平居中对齐）
+- margin-left:auto; margin-right:auto (自动充满）
 要实现水平居中需要满足两个条件1必须是块级元素2盒子必须指定了宽度
 
 外边距合并
-例 .xiongda{
+```
+.xiongda{
 margin-bottom: 100px;
 }
 .xionger{
 margin-top:150px;
 }
+```
 两个盒子的距离是最大的为准(150px)
 嵌套块元素垂直外边距的合并
 若父元素没有上内边距和边框，父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的最大值。即使父元素上边距为0，合并也会发生。
-解决方案1为父元素定义一像素的上边框或上内边距border padding 
-2.为父元素添加overflow::hidden
+- 解决方案
+- 1.为父元素定义一像素的上边框或上内边距border padding 
+- 2.为父元素添加overflow::hidden
 
-padding撑开盒子的情况
+# padding撑开盒子的情况
 因为父盒子有宽度，给定值了，则padding会撑开
 儿子没有给定宽度，用的是默认的，所以padding没有撑开盒子
 
-圆角边框（CSS3）
-border-radius: 50%; 让一个正方形变成圆圈 
-border-radius: 1px 1px 1px 1px(顺时针左上开始）
+# 圆角边框（CSS3）
+- border-radius: 50%; 让一个正方形变成圆圈 
+- border-radius: 1px 1px 1px 1px(顺时针左上开始）
 两个值（左上右下开始，对角线，右上左下）
 
-盒子阴影
+# 盒子阴影
 语法格式 box-shadow:水平阴影 垂直阴影 模糊距离 阴影大小 阴影颜色
 
-浮动float
-为什么用浮动：让多个div在一行内显示
-float: left 左对齐 float: right 右对齐
+# 浮动float
+- 为什么用浮动：让多个div在一行内显示
+- float: left 左对齐 float: right 右对齐
 
-浮动特性
-3个块元素盒子要在同一行，就需要全部浮动
-浮动有隐藏模式转换
-元素添加浮动后，转换为行内块模式
+# 浮动特性
+- 3个块元素盒子要在同一行，就需要全部浮动
+- 浮动有隐藏模式转换
+- 元素添加浮动后，转换为行内块模式
