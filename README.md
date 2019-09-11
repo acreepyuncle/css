@@ -113,7 +113,7 @@ display：inline-block;
 权重相同则就近原则，权重可以叠加
 继承的权重为0
 
-背景
+# 背景
 - background-color:
 - background-image: url()
 - background-repeat:repeat 背景平铺
@@ -158,15 +158,10 @@ border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid 
 - padding: 10px 20px 30px;(上10，左右20 下30)
 - padding: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
 
-外边距(margin)
+# 外边距(margin)
 - margin: 10px 20px;(上下10，左右20)
 - margin: 10px 20px 30px;(上10，左右20 下30)
 - margin: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
-
-盒子水平居中
-- margin: 0 auto;(上下是0，左右是自动，水平居中对齐）
-- margin-left:auto; margin-right:auto (自动充满）
-要实现水平居中需要满足两个条件1必须是块级元素2盒子必须指定了宽度
 
 外边距合并
 ```
@@ -183,6 +178,11 @@ margin-top:150px;
 - 解决方案
 - 1.为父元素定义一像素的上边框或上内边距border padding 
 - 2.为父元素添加overflow::hidden
+
+# 盒子水平居中
+- margin: 0 auto;(上下是0，左右是自动，水平居中对齐）
+- margin-left:auto; margin-right:auto (自动充满）
+要实现水平居中需要满足两个条件1必须是块级元素2盒子必须指定了宽度
 
 # padding撑开盒子的情况
 因为父盒子有宽度，给定值了，则padding会撑开
