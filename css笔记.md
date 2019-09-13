@@ -206,3 +206,25 @@ margin-top:150px;
 - 浮动有隐藏模式转换
 - 内幕特性：浮动的元素是找离它最近的父级元素对齐，但是不会超出内边距的范围。
 - 元素添加浮动后，转换为行内块模式
+
+# 清除浮动的方法 
+- 1额外标签法：在最后一个浮动的子元素后，新添加一个标签。  style中新标签内写上clear:both;
+- 2父级元素添加overflow:hidden; 不是所有元素都要清除，有影响的清除
+- 3使用after伪元素清除浮动
+```
+.clearfix:after {
+content:"";display:block;height:0 clear: both; visibility: hidden; }
+.clearfix:after { *zoom: 1;}ie6专用
+```
+- 4使用before和after双伪元素清除浮动
+```
+.clearfix:before,.clearfix；after {
+content:"";
+display:table;
+}
+.clearfix:after {
+clear:both;
+}
+.clearfix {
+*zoom:1;
+```
