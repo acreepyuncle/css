@@ -73,7 +73,7 @@ ctrl+/快速添加注释
 兄弟关系的标签，用+ 比如div+p
 生成带有类名或id名字的,写.demo或#id名按下tab键即可
 
-# 标签（元素）显#示模式（display)
+# 标签（元素）显示模式（display)
 - 块级元素block-level
 每个块元素通常占据一整行或多行，可设置高度宽度对齐等属性，常见块元素有h1~h6,p,div ul ol li，div是典型
 - 块元素特点：宽度默认是页面全部占满，可以容纳内联元素和其他块元素
@@ -163,7 +163,7 @@ border-top: 1px solid red; border-bottom: 1px solid red; border-left: 1px solid 
 - margin: 10px 20px 30px;(上10，左右20 下30)
 - margin: 10px 20px 30px 40px;(上10，右20 下30 左40)顺时针
 
-外边距合并
+# 外边距合并
 ```
 .xiongda{
 margin-bottom: 100px;
@@ -201,6 +201,8 @@ margin-top:150px;
 - float: left 左对齐 float: right 右对齐
 
 # 浮动特性
+- 标准流：盒子上下排列
 - 3个块元素盒子要在同一行，就需要全部浮动
 - 浮动有隐藏模式转换
+- 内幕特性：浮动的元素是找离它最近的父级元素对齐，但是不会超出内边距的范围。
 - 元素添加浮动后，转换为行内块模式
